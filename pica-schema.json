@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://or.fer.hr/pica.json",
+  "type": "array",
+  "title": "OR Pica",
+  "description": "Skup podataka o pićima za otvoreno računarstvo.",
+  "items": {
+    "type": "object",
+    "title": "Pice",
+    "description": "Objekt koji sadrži sve podatke o jednom piću.",
+    "required": ["id", "naziv", "vrsta", "proizvodac", "postotak_alkohola", "cijena", "volumen"],
+    "properties": {
+      "id": {
+        "type": "integer",
+        "title": "ID",
+        "description": "Jedinstveni identifikator pića."
+      },
+      "naziv": {
+        "type": "string",
+        "title": "Naziv pića",
+        "description": "Naziv pića."
+      },
+      "vrsta": {
+        "type": "string",
+        "title": "Vrsta pića",
+        "description": "Vrsta pića (npr. pivo, vino, žestoko)."
+      },
+      "proizvodac": {
+        "type": "string",
+        "title": "Proizvođač",
+        "description": "Naziv proizvođača pića."
+      },
+      "postotak_alkohola": {
+        "type": "number",
+        "title": "Postotak alkohola",
+        "description": "Postotak alkohola u piću."
+      },
+      "cijena": {
+        "type": "number",
+        "title": "Cijena",
+        "description": "Cijena pića u kunama."
+      },
+      "volumen": {
+        "type": "number",
+        "title": "Volumen",
+        "description": "Volumen pića u mililitrima."
+      }
+    }
+  }
+}

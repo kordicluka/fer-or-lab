@@ -1,0 +1,191 @@
+{
+    "pica": [
+        {
+            "id": 1,
+            "naziv": "Ožujsko",
+            "vrsta": "alkoholno",
+            "cijena": 10.99,
+            "volumen": 500,
+            "podvrsta": "pivo",
+            "sastojci": [
+                "Voda",
+                "Hmelj",
+                "Ječmeni slad"
+            ],
+            "proizvodac": {
+                "naziv": "Zagrebačka pivovara",
+                "zemlja": "Hrvatska"
+            },
+            "postotak_alkohola": 5.00,
+            "godina_proizvodnje": 2024
+        },
+        {
+            "id": 2,
+            "naziv": "Pelinkovac",
+            "vrsta": "alkoholno",
+            "cijena": 89.99,
+            "volumen": 700,
+            "podvrsta": "liker",
+            "sastojci": [
+                "Voda",
+                "Pelin",
+                "Alkohol"
+            ],
+            "proizvodac": {
+                "naziv": "Badel",
+                "zemlja": "Hrvatska"
+            },
+            "postotak_alkohola": 28.00,
+            "godina_proizvodnje": 2023
+        },
+        {
+            "id": 3,
+            "naziv": "Coca-Cola",
+            "vrsta": "bezalkoholno",
+            "cijena": 8.99,
+            "volumen": 330,
+            "podvrsta": "gazirano piće",
+            "sastojci": [
+                "Voda",
+                "Šećer",
+                "Ugljični dioksid"
+            ],
+            "proizvodac": {
+                "naziv": "Coca-Cola",
+                "zemlja": "SAD"
+            },
+            "postotak_alkohola": 0.00,
+            "godina_proizvodnje": 2024
+        },
+        {
+            "id": 4,
+            "naziv": "Jamnica",
+            "vrsta": "bezalkoholno",
+            "cijena": 7.99,
+            "volumen": 1500,
+            "podvrsta": "mineralna voda",
+            "sastojci": [
+                "Voda",
+                "Ugljični dioksid"
+            ],
+            "proizvodac": {
+                "naziv": "Jamnica",
+                "zemlja": "Hrvatska"
+            },
+            "postotak_alkohola": 0.00,
+            "godina_proizvodnje": 2024
+        },
+        {
+            "id": 5,
+            "naziv": "Heineken",
+            "vrsta": "alkoholno",
+            "cijena": 12.99,
+            "volumen": 330,
+            "podvrsta": "pivo",
+            "sastojci": [
+                "Voda",
+                "Hmelj",
+                "Ječmeni slad"
+            ],
+            "proizvodac": {
+                "naziv": "Heineken",
+                "zemlja": "Nizozemska"
+            },
+            "postotak_alkohola": 5.00,
+            "godina_proizvodnje": 2024
+        },
+        {
+            "id": 6,
+            "naziv": "Johnnie Walker Black Label",
+            "vrsta": "alkoholno",
+            "cijena": 249.99,
+            "volumen": 700,
+            "podvrsta": "whisky",
+            "sastojci": [
+                "Voda",
+                "Ječmeni destilat",
+                "Karamela"
+            ],
+            "proizvodac": {
+                "naziv": "Diageo",
+                "zemlja": "Ujedinjeno Kraljevstvo"
+            },
+            "postotak_alkohola": 40.00,
+            "godina_proizvodnje": 2020
+        },
+        {
+            "id": 7,
+            "naziv": "Absolut Vodka",
+            "vrsta": "alkoholno",
+            "cijena": 159.99,
+            "volumen": 1000,
+            "podvrsta": "vodka",
+            "sastojci": [
+                "Voda",
+                "Alkohol"
+            ],
+            "proizvodac": {
+                "naziv": "Pernod Ricard",
+                "zemlja": "Francuska"
+            },
+            "postotak_alkohola": 40.00,
+            "godina_proizvodnje": 2023
+        },
+        {
+            "id": 8,
+            "naziv": "Maraschino",
+            "vrsta": "alkoholno",
+            "cijena": 129.99,
+            "volumen": 700,
+            "podvrsta": "liker",
+            "sastojci": [
+                "Voda",
+                "Jabuka",
+                "Alkohol"
+            ],
+            "proizvodac": {
+                "naziv": "Maraska",
+                "zemlja": "Hrvatska"
+            },
+            "postotak_alkohola": 32.00,
+            "godina_proizvodnje": 2022
+        },
+        {
+            "id": 9,
+            "naziv": "Vindi Sok od jabuke",
+            "vrsta": "bezalkoholno",
+            "cijena": 11.99,
+            "volumen": 1000,
+            "podvrsta": "voćni sok",
+            "sastojci": [
+                "Voda",
+                "Jabuka"
+            ],
+            "proizvodac": {
+                "naziv": "Vindija",
+                "zemlja": "Hrvatska"
+            },
+            "postotak_alkohola": 0.00,
+            "godina_proizvodnje": 2024
+        },
+        {
+            "id": 10,
+            "naziv": "Somersby Apple Cider",
+            "vrsta": "alkoholno",
+            "cijena": 14.99,
+            "volumen": 330,
+            "podvrsta": "cider",
+            "sastojci": [
+                "Voda",
+                "Jabuka",
+                "Alkohol"
+            ],
+            "proizvodac": {
+                "naziv": "Carlsberg",
+                "zemlja": "Danska"
+            },
+            "postotak_alkohola": 4.50,
+            "godina_proizvodnje": 2024
+        }
+    ]
+}
