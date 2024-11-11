@@ -62,3 +62,13 @@ if command -v jq &> /dev/null && jq empty pica.json 2>/dev/null; then
 else
     echo "Warning: Could not validate JSON (jq not installed or invalid JSON)"
 fi
+
+# Generate database dump
+echo "Generating database dump..."
+pg_dump -h 157.90.244.229 -U postgres -d pica_db > pica_db_dump.sql
+
+if [ $? -eq 0 ]; then
+    echo "Database dump created successfully: pica_db_dump.sql"
+else
+    echo "Error: Failed to create database dump"
+fi
