@@ -1,0 +1,11 @@
+id,naziv,vrsta,podvrsta,proizvodac,zemlja,godina_proizvodnje,postotak_alkohola,volumen,cijena,sastojci
+1,Ožujsko,alkoholno,pivo,Zagrebačka pivovara,Hrvatska,2024,5.00,500,10.99,"Voda, Hmelj, Ječmeni slad"
+2,Pelinkovac,alkoholno,liker,Badel,Hrvatska,2023,28.00,700,89.99,"Voda, Pelin, Alkohol"
+3,Coca-Cola,bezalkoholno,gazirano piće,Coca-Cola,SAD,2024,0.00,330,8.99,"Voda, Šećer, Ugljični dioksid"
+4,Jamnica,bezalkoholno,mineralna voda,Jamnica,Hrvatska,2024,0.00,1500,7.99,"Voda, Ugljični dioksid"
+5,Heineken,alkoholno,pivo,Heineken,Nizozemska,2024,5.00,330,12.99,"Voda, Hmelj, Ječmeni slad"
+6,Johnnie Walker Black Label,alkoholno,whisky,Diageo,Ujedinjeno Kraljevstvo,2020,40.00,700,249.99,"Voda, Ječmeni destilat, Karamela"
+7,Absolut Vodka,alkoholno,vodka,Pernod Ricard,Francuska,2023,40.00,1000,159.99,"Voda, Alkohol"
+8,Maraschino,alkoholno,liker,Maraska,Hrvatska,2022,32.00,700,129.99,"Voda, Jabuka, Alkohol"
+9,Vindi Sok od jabuke,bezalkoholno,voćni sok,Vindija,Hrvatska,2024,0.00,1000,11.99,"Voda, Jabuka"
+10,Somersby Apple Cider,alkoholno,cider,Carlsberg,Danska,2024,4.50,330,14.99,"Voda, Jabuka, Alkohol"
