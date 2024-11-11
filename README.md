@@ -1,3 +1,7 @@
+# LINK NA 2. LAB
+
+Aplikacija je dostupna na: [https://or-brown.vercel.app/](https://or-brown.vercel.app/)
+
 # Skup podataka o pićima
 
 Ovaj skup podataka sadrži informacije o različitim pićima, uključujući alkoholna i bezalkoholna pića.
