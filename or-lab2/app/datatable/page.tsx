@@ -24,10 +24,16 @@ type Pice = {
   id: number;
   naziv: string;
   vrsta: string;
-  proizvodac: string;
+  podvrsta: string;
+  proizvodac: {
+    naziv: string;
+    zemlja: string;
+  };
+  godina_proizvodnje: number;
   postotak_alkohola: number;
-  cijena: number;
   volumen: number;
+  cijena: number;
+  sastojci: string[];
 };
 
 export default function DataTable() {
@@ -49,8 +55,26 @@ export default function DataTable() {
     const lowercasedFilter = filter.toLowerCase();
     const filtered = data.filter((item) => {
       if (filterColumn === "all") {
-        return Object.values(item).some((val) =>
-          val.toString().toLowerCase().includes(lowercasedFilter)
+        return Object.entries(item).some(([key, val]) => {
+          if (key === "sastojci") {
+            return (val as string[]).some((ingredient) =>
+              ingredient.toLowerCase().includes(lowercasedFilter)
+            );
+          }
+          if (key === "proizvodac") {
+            return Object.values(val as { naziv: string; zemlja: string }).some(
+              (subVal) => subVal.toLowerCase().includes(lowercasedFilter)
+            );
+          }
+          return val.toString().toLowerCase().includes(lowercasedFilter);
+        });
+      } else if (filterColumn === "sastojci") {
+        return item[filterColumn].some((ingredient) =>
+          ingredient.toLowerCase().includes(lowercasedFilter)
+        );
+      } else if (filterColumn === "proizvodac") {
+        return Object.values(item[filterColumn]).some((val) =>
+          val.toLowerCase().includes(lowercasedFilter)
         );
       } else {
         return item[filterColumn]
@@ -63,10 +87,36 @@ export default function DataTable() {
   }, [filter, filterColumn, data]);
 
   const downloadCSV = () => {
-    const headers = Object.keys(data[0] || {}).join(",");
+    const headers = [
+      "id",
+      "naziv",
+      "vrsta",
+      "podvrsta",
+      "proizvodac_naziv",
+      "proizvodac_zemlja",
+      "godina_proizvodnje",
+      "postotak_alkohola",
+      "volumen",
+      "cijena",
+      "sastojci",
+    ].join(",");
     const csv = [
       headers,
-      ...filteredData.map((row) => Object.values(row).join(",")),
+      ...filteredData.map((row) =>
+        [
+          row.id,
+          row.naziv,
+          row.vrsta,
+          row.podvrsta,
+          row.proizvodac.naziv,
+          row.proizvodac.zemlja,
+          row.godina_proizvodnje,
+          row.postotak_alkohola,
+          row.volumen,
+          row.cijena,
+          `"${row.sastojci.join(", ")}"`,
+        ].join(",")
+      ),
     ].join("\n");
 
     const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
@@ -140,7 +190,7 @@ export default function DataTable() {
         </Button>
       </div>
 
-      <div className="rounded-md border">
+      <div className="rounded-md border overflow-x-auto">
         <Table>
           <TableHeader>
             <TableRow>
@@ -153,7 +203,13 @@ export default function DataTable() {
             {filteredData.map((row, index) => (
               <TableRow key={index}>
                 {(Object.keys(row) as Array<keyof Pice>).map((key) => (
-                  <TableCell key={key}>{row[key].toString()}</TableCell>
+                  <TableCell key={key}>
+                    {key === "sastojci"
+                      ? row[key].join(", ")
+                      : key === "proizvodac"
+                      ? `${row[key].naziv}, ${row[key].zemlja}`
+                      : row[key].toString()}
+                  </TableCell>
                 ))}
               </TableRow>
             ))}
